@@ -13,9 +13,11 @@ namespace FlightBookingProject
         private void button1_Click(object sender, EventArgs e)
         {
             string user, pass;
+            
             user = textBox1.Text;
             pass = textBox2.Text;
-            if (user == "alexandru" && pass == "test")
+            
+            if (user == "admin" && pass == "admin")
             {
                 FlightBooking fForm = new FlightBooking();
                 fForm.Show();

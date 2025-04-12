@@ -25,7 +25,8 @@ namespace FlightBookingProject
             InitializeComponent();
         }
 
-        private void makingVisible() {
+        private void makingVisible()
+        {
             lblDocNo.Visible = true;
             lblDocIssueDate.Visible = true;
             lblDocExpiryDate.Visible = true;
@@ -34,6 +35,7 @@ namespace FlightBookingProject
             dtpDocIssueDate.Visible = true;
             dtpDocExpiryDate.Visible = true;
         }
+
         private void rbPassport_CheckedChanged(object sender, EventArgs e)
         {
             makingVisible();
@@ -41,7 +43,6 @@ namespace FlightBookingProject
             lblDocNo.Text = "Passport No.";
             lblDocIssueDate.Text = "Passport Issue Date";
             lblDocExpiryDate.Text = "Passport Expiry Date";
-
         }
 
         private void rbIdentify_CheckedChanged(object sender, EventArgs e)
@@ -51,16 +52,17 @@ namespace FlightBookingProject
             lblDocNo.Text = "ID Card No.";
             lblDocIssueDate.Text = "ID Card Issue Date";
             lblDocExpiryDate.Text = "ID Card Expiry Date";
-            
         }
 
         private void btnBook_Click(object sender, EventArgs e)
         {
-            if (txtDeparture.Text == "" | txtDestination.Text == "" || txtFirstName.Text == "" || txtLastName.Text == "" || txtDocNo.Text == "")
+            if (txtDeparture.Text == "" | txtDestination.Text == "" || txtFirstName.Text == "" ||
+                txtLastName.Text == "" || txtDocNo.Text == "")
             {
                 MessageBox.Show("Enter Appropriate Values", "Missing Values");
             }
-            else {
+            else
+            {
                 fullName = txtFirstName.Text + " " + txtLastName.Text;
                 departure = txtDeparture.Text;
                 destination = txtDestination.Text;
@@ -81,12 +83,10 @@ namespace FlightBookingProject
 
         private void FlightBooking_Load(object sender, EventArgs e)
         {
-
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
